@@ -16,12 +16,26 @@ public class programa1 {
         int numero;
         int primo;
 
+        double coeficienteA;
+        double coeficienteB;
+        double coeficienteC;
+        double delta;
+        double x1;
+        double x2;
+
+        int cantidad;
+        double numeroIngresado;
+        double suma;
+        double promedio;
+
         while (true) {
 
             System.out.println("\n===== MENU PRINCIPAL =====");
             System.out.println("1. Calcular el n-esimo termino de Fibonacci");
             System.out.println("2. Calcular el n-esimo numero primo");
-            System.out.println("3. Salir");
+            System.out.println("3. Calcular las raices de una ecuacion cuadratica");
+            System.out.println("4. Calcular el promedio de n numeros");
+            System.out.println("5. Salir");
             System.out.print("Seleccione una opcion: ");
 
             opcion = teclado.nextInt();
@@ -94,15 +108,91 @@ public class programa1 {
 
                 case 3:
 
+                    System.out.println("\nEcuacion cuadratica: ax^2 + bx + c = 0");
+
+                    System.out.print("Ingrese el valor de a: ");
+                    coeficienteA = teclado.nextDouble();
+
+                    System.out.print("Ingrese el valor de b: ");
+                    coeficienteB = teclado.nextDouble();
+
+                    System.out.print("Ingrese el valor de c: ");
+                    coeficienteC = teclado.nextDouble();
+
+                    if (coeficienteA == 0) {
+
+                        System.out.println("El valor de a no puede ser 0.");
+
+                    } else {
+
+                        delta = (coeficienteB * coeficienteB)
+                                - (4 * coeficienteA * coeficienteC);
+
+                        if (delta > 0) {
+
+                            x1 = (-coeficienteB + Math.sqrt(delta))
+                                    / (2 * coeficienteA);
+
+                            x2 = (-coeficienteB - Math.sqrt(delta))
+                                    / (2 * coeficienteA);
+
+                            System.out.println("La ecuacion tiene dos soluciones reales.");
+                            System.out.println("x1 = " + x1);
+                            System.out.println("x2 = " + x2);
+
+                        } else if (delta == 0) {
+
+                            x1 = -coeficienteB / (2 * coeficienteA);
+
+                            System.out.println("La ecuacion tiene una solucion real.");
+                            System.out.println("x = " + x1);
+
+                        } else {
+
+                            System.out.println("La ecuacion no tiene soluciones reales.");
+                        }
+                    }
+
+                    break;
+
+                case 4:
+
+                    System.out.print("¿Cuantos numeros desea ingresar?: ");
+                    cantidad = teclado.nextInt();
+
+                    if (cantidad <= 0) {
+
+                        System.out.println("La cantidad debe ser mayor que 0.");
+
+                    } else {
+
+                        suma = 0;
+
+                        for (i = 1; i <= cantidad; i++) {
+
+                            System.out.print("Ingrese el numero " + i + ": ");
+                            numeroIngresado = teclado.nextDouble();
+
+                            suma = suma + numeroIngresado;
+                        }
+
+                        promedio = suma / cantidad;
+
+                        System.out.println("El promedio es: " + promedio);
+                    }
+
+                    break;
+
+                case 5:
+
                     System.out.println("Programa finalizado.");
                     teclado.close();
                     return;
 
                 default:
 
-                    System.out.println("Opcion invalida. Seleccione una opcion del 1 al 3.");
+                    System.out.println("Opcion invalida. Seleccione una opcion del 1 al 5.");
             }
         }
     }
 }
-
