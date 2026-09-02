@@ -30,12 +30,16 @@ public class programa1 {
 
         while (true) {
 
-            System.out.println("\n===== MENU PRINCIPAL =====");
-            System.out.println("1. Calcular el n-esimo termino de Fibonacci");
-            System.out.println("2. Calcular el n-esimo numero primo");
-            System.out.println("3. Calcular las raices de una ecuacion cuadratica");
-            System.out.println("4. Calcular el promedio de n numeros");
-            System.out.println("5. Salir");
+            System.out.println("+===============================================+");
+            System.out.println("|              MENU PRINCIPAL                   |");
+            System.out.println("+===============================================+");
+            System.out.println("| 1. Calcular el n-esimo termino de Fibonacci   |");
+            System.out.println("| 2. Calcular el n-esimo numero primo           |");
+            System.out.println("| 3. Calcular las raices de una ecuacion        |");
+            System.out.println("|    cuadratica                                 |");
+            System.out.println("| 4. Calcular el promedio de n numeros          |");
+            System.out.println("| 5. Salir                                      |");
+            System.out.println("+===============================================+");
             System.out.print("Seleccione una opcion: ");
 
             opcion = teclado.nextInt();
