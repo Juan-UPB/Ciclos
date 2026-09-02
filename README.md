@@ -53,6 +53,8 @@ El programa recibe los datos necesarios, procesa la información mediante estruc
 
 En la presentación se responden las preguntas propuestas para el trabajo y se explica el funcionamiento de los programas, haciendo énfasis en el uso de los ciclos y en la lógica utilizada para solucionar cada problema.
 
+https://canva.link/1p73757zm98mul9
+
 ## Tecnologías utilizadas
 
 * Java
